@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+let showProviderInfoSegueIdentifier = "ShowProviderInfoSegue"
+
+class SelectProviderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
