@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        initParseWithLaunchOptions(launchOptions)
+        let params = NSMutableDictionary()
+        
+        //loadProvidersForCity
+        PFCloud.callFunctionInBackground("loadProvidersForCity", withParameters: [:]) {
+            (response: AnyObject?, error: NSError?) -> Void in
+            let responseOptional = response as? String
+            if let responseString = responseOptional {
+                print(responseString)
+            }
+
+        }
+               // Override point for customization after application launch.
         return true
+    }
+    func initParseWithLaunchOptions(launchOptions: [NSObject: AnyObject]?)
+    {
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId("Alc8zz2jiOXicJlvLHnxLqe0Xzi3ZxXX15n05iPE",
+            clientKey: "V4XTLW11hmv7Kflx0Y0xuZ6VnDnwF3pgBi7cTnlu")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
     }
 
     func applicationWillResignActive(application: UIApplication) {

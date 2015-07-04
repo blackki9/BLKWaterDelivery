@@ -1,0 +1,17 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "BLKWaterDeliveryCloudCode": {
+      "link": "Water Delivery"
+    },
+    "Water Delivery": {
+      "applicationId": "Alc8zz2jiOXicJlvLHnxLqe0Xzi3ZxXX15n05iPE",
+      "masterKey": "w0vERLKmfYg69sUh69lgBGEbmZ9tCGU8914qK6ql"
+    },
+    "_default": {
+      "link": "Water Delivery"
+    }
+  }
+}
