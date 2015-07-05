@@ -36,6 +36,7 @@
 		FDD39DA51B47F93B00D81FFB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD39DA41B47F93B00D81FFB /* SystemConfiguration.framework */; };
 		FDD39DA71B47F94400D81FFB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD39DA61B47F94400D81FFB /* libz.dylib */; };
 		FDD39DA91B47F94D00D81FFB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD39DA81B47F94D00D81FFB /* libsqlite3.dylib */; };
+		FDD39DAB1B49699B00D81FFB /* ParseRequestsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD39DAA1B49699B00D81FFB /* ParseRequestsWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		FDD39DA41B47F93B00D81FFB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FDD39DA61B47F94400D81FFB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		FDD39DA81B47F94D00D81FFB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		FDD39DAA1B49699B00D81FFB /* ParseRequestsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseRequestsWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		FD1713731B45C3CA005110AD /* network */ = {
 			isa = PBXGroup;
 			children = (
+				FDD39DAA1B49699B00D81FFB /* ParseRequestsWrapper.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				FDB90C7C1B4401770003B3D2 /* MakeOrderViewController.swift in Sources */,
 				FDB90C721B43F8220003B3D2 /* SelectProviderViewController.swift in Sources */,
 				FD17136D1B45807F005110AD /* SelectProviderTableViewCell.swift in Sources */,
+				FDD39DAB1B49699B00D81FFB /* ParseRequestsWrapper.swift in Sources */,
 				FDB90C741B43FDF60003B3D2 /* ProviderInfoViewController.swift in Sources */,
 				FD17136A1B457FBA005110AD /* SelectProviderDatasource.swift in Sources */,
 			);

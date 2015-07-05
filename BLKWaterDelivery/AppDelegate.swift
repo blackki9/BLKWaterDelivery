@@ -21,14 +21,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let params = NSMutableDictionary()
         
         //loadProvidersForCity
-        PFCloud.callFunctionInBackground("loadProvidersForCity", withParameters: [:]) {
+       
+        
+        let requestManager = ParseRequestsWrapper()
+        requestManager.callFunctionWithName("loadContactInfoForProvider", parameters: ["contactInfoObjectId":"zFlRNScYAI"], callback:{
             (response: AnyObject?, error: NSError?) -> Void in
             let responseOptional = response as? String
             if let responseString = responseOptional {
-                print(responseString)
+                println(responseString)
             }
-
-        }
+            else {
+                
+            }
+        })
+        requestManager.callFunctionWithName("loadProvidersForDefaultCity", parameters: [:], callback: {
+            (response: AnyObject?, error: NSError?) -> Void in
+            let responseOptional = response as? String
+            if let responseString = responseOptional {
+                println(responseString)
+            }
+            
+        })
+    
                // Override point for customization after application launch.
         return true
     }
