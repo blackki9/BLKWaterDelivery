@@ -37,6 +37,15 @@
 		FDD39DA71B47F94400D81FFB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD39DA61B47F94400D81FFB /* libz.dylib */; };
 		FDD39DA91B47F94D00D81FFB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD39DA81B47F94D00D81FFB /* libsqlite3.dylib */; };
 		FDD39DAB1B49699B00D81FFB /* ParseRequestsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD39DAA1B49699B00D81FFB /* ParseRequestsWrapper.swift */; };
+		FDE394C51B4C4CD300531870 /* ContactInfoObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394C21B4C4CD300531870 /* ContactInfoObjectCreator.swift */; };
+		FDE394C61B4C4CD300531870 /* ObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394C31B4C4CD300531870 /* ObjectCreator.swift */; };
+		FDE394C71B4C4CD300531870 /* ProviderObjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394C41B4C4CD300531870 /* ProviderObjectCreator.swift */; };
+		FDE394C91B4C4CEB00531870 /* ObjectCreatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394C81B4C4CEB00531870 /* ObjectCreatorFactory.swift */; };
+		FDE394CE1B4C4D8800531870 /* RemoteCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394CD1B4C4D8800531870 /* RemoteCommunicator.swift */; };
+		FDE394D01B4C4E2900531870 /* ProvidersRemoteCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394CF1B4C4E2900531870 /* ProvidersRemoteCommunicator.swift */; };
+		FDE394D21B4C4EBB00531870 /* ContactInfoRemoteCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394D11B4C4EBB00531870 /* ContactInfoRemoteCommunicator.swift */; };
+		FDE394D41B4C4EF100531870 /* RemoteCommunicatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394D31B4C4EF100531870 /* RemoteCommunicatorFactory.swift */; };
+		FDE394D61B4C53DE00531870 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE394D51B4C53DE00531870 /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +93,15 @@
 		FDD39DA61B47F94400D81FFB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		FDD39DA81B47F94D00D81FFB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FDD39DAA1B49699B00D81FFB /* ParseRequestsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseRequestsWrapper.swift; sourceTree = "<group>"; };
+		FDE394C21B4C4CD300531870 /* ContactInfoObjectCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoObjectCreator.swift; sourceTree = "<group>"; };
+		FDE394C31B4C4CD300531870 /* ObjectCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectCreator.swift; sourceTree = "<group>"; };
+		FDE394C41B4C4CD300531870 /* ProviderObjectCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderObjectCreator.swift; sourceTree = "<group>"; };
+		FDE394C81B4C4CEB00531870 /* ObjectCreatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectCreatorFactory.swift; sourceTree = "<group>"; };
+		FDE394CD1B4C4D8800531870 /* RemoteCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCommunicator.swift; sourceTree = "<group>"; };
+		FDE394CF1B4C4E2900531870 /* ProvidersRemoteCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvidersRemoteCommunicator.swift; sourceTree = "<group>"; };
+		FDE394D11B4C4EBB00531870 /* ContactInfoRemoteCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoRemoteCommunicator.swift; sourceTree = "<group>"; };
+		FDE394D31B4C4EF100531870 /* RemoteCommunicatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCommunicatorFactory.swift; sourceTree = "<group>"; };
+		FDE394D51B4C53DE00531870 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,16 +152,10 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		FD17136E1B4584C1005110AD /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
 		FD1713731B45C3CA005110AD /* network */ = {
 			isa = PBXGroup;
 			children = (
+				FDE394CC1B4C4D8800531870 /* remoteCommunicator */,
 				FDD39DAA1B49699B00D81FFB /* ParseRequestsWrapper.swift */,
 			);
 			path = network;
@@ -170,9 +182,9 @@
 		FDB90C4D1B43EA310003B3D2 /* BLKWaterDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				FDE394BA1B4C4BBB00531870 /* model */,
 				FDD39D8D1B47F86700D81FFB /* frameworks */,
 				FD1713731B45C3CA005110AD /* network */,
-				FD17136E1B4584C1005110AD /* model */,
 				FD17136B1B458065005110AD /* views */,
 				FD1713681B457F9F005110AD /* datasources */,
 				FDB90C7A1B4400F80003B3D2 /* storyboards */,
@@ -252,6 +264,37 @@
 				FDD39D8F1B47F86700D81FFB /* ParseUI.framework */,
 			);
 			path = frameworks;
+			sourceTree = "<group>";
+		};
+		FDE394BA1B4C4BBB00531870 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FDE394C11B4C4CD300531870 /* objectCreators */,
+				FDE394D51B4C53DE00531870 /* DBManager.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FDE394C11B4C4CD300531870 /* objectCreators */ = {
+			isa = PBXGroup;
+			children = (
+				FDE394C21B4C4CD300531870 /* ContactInfoObjectCreator.swift */,
+				FDE394C31B4C4CD300531870 /* ObjectCreator.swift */,
+				FDE394C41B4C4CD300531870 /* ProviderObjectCreator.swift */,
+				FDE394C81B4C4CEB00531870 /* ObjectCreatorFactory.swift */,
+			);
+			path = objectCreators;
+			sourceTree = "<group>";
+		};
+		FDE394CC1B4C4D8800531870 /* remoteCommunicator */ = {
+			isa = PBXGroup;
+			children = (
+				FDE394CD1B4C4D8800531870 /* RemoteCommunicator.swift */,
+				FDE394CF1B4C4E2900531870 /* ProvidersRemoteCommunicator.swift */,
+				FDE394D11B4C4EBB00531870 /* ContactInfoRemoteCommunicator.swift */,
+				FDE394D31B4C4EF100531870 /* RemoteCommunicatorFactory.swift */,
+			);
+			path = remoteCommunicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,15 +399,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE394C61B4C4CD300531870 /* ObjectCreator.swift in Sources */,
+				FDE394C51B4C4CD300531870 /* ContactInfoObjectCreator.swift in Sources */,
 				FDB90C831B4407780003B3D2 /* ProfileViewController.swift in Sources */,
 				FDB90C511B43EA310003B3D2 /* AppDelegate.swift in Sources */,
 				FDB90C7E1B4402200003B3D2 /* InputContactInfoViewController.swift in Sources */,
+				FDE394D01B4C4E2900531870 /* ProvidersRemoteCommunicator.swift in Sources */,
 				FDB90C851B4407820003B3D2 /* OrdersViewController.swift in Sources */,
 				FDB90C7C1B4401770003B3D2 /* MakeOrderViewController.swift in Sources */,
+				FDE394CE1B4C4D8800531870 /* RemoteCommunicator.swift in Sources */,
 				FDB90C721B43F8220003B3D2 /* SelectProviderViewController.swift in Sources */,
 				FD17136D1B45807F005110AD /* SelectProviderTableViewCell.swift in Sources */,
 				FDD39DAB1B49699B00D81FFB /* ParseRequestsWrapper.swift in Sources */,
+				FDE394D21B4C4EBB00531870 /* ContactInfoRemoteCommunicator.swift in Sources */,
+				FDE394D41B4C4EF100531870 /* RemoteCommunicatorFactory.swift in Sources */,
+				FDE394C91B4C4CEB00531870 /* ObjectCreatorFactory.swift in Sources */,
+				FDE394C71B4C4CD300531870 /* ProviderObjectCreator.swift in Sources */,
 				FDB90C741B43FDF60003B3D2 /* ProviderInfoViewController.swift in Sources */,
+				FDE394D61B4C53DE00531870 /* DBManager.swift in Sources */,
 				FD17136A1B457FBA005110AD /* SelectProviderDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

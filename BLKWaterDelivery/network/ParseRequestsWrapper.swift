@@ -12,7 +12,7 @@ import Bolts
 
 class ParseRequestsWrapper: NSObject {
  
-    func callFunctionWithName(functionName:String,parameters:Dictionary<String,String>,callback: (response: AnyObject?, error: NSError?)->Void) {
+    static func callFunctionWithName(functionName:String,parameters:Dictionary<String,String>,callback: (response: AnyObject?, error: NSError?)->Void) {
         PFCloud.callFunctionInBackground(functionName, withParameters:parameters) {
             (response: AnyObject?, error: NSError?) -> Void in
             callback(response: response, error: error)
