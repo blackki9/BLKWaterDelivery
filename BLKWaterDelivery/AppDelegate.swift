@@ -40,11 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let factory = RemoteCommunicatorFactory()
         
         factory.providersCommunicator().loadDataWithParameters([:], callback: { (result) -> Void in
-           println(result!)
+           print(result!)
         })
         
         factory.contactInfoCommunicator().loadDataWithParameters(["contactInfoObjectId":"zFlRNScYAI"], callback: { (result) -> Void in
-            println(result!)
+            print(result!)
         })
                // Override point for customization after application launch.
         return true

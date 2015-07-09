@@ -10,5 +10,5 @@ import Foundation
 
 protocol ObjectCreator
 {
-    func createObjectWithData(objectData:Dictionary<String,AnyObject?>) -> AnyObject?;
+    func createObjectsWithData(objectData:Dictionary<String,AnyObject>) -> NSArray?
 }

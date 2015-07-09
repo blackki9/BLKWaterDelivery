@@ -10,4 +10,9 @@ import UIKit
 
 class DBManager: NSObject {
    
+    func save()
+    {
+        
+    }
+    
 }

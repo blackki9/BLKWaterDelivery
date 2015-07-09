@@ -11,6 +11,7 @@ import UIKit
 let ContactInfoRemoteFunctionName = "loadContactInfoForProvider"
 
 class ContactInfoRemoteCommunicator: NSObject, RemoteCommunicator {
+    
     func loadDataWithParameters(params:Dictionary<String,String>,callback:(result:String?)->Void)
     {
         ParseRequestsWrapper.callFunctionWithName(ContactInfoRemoteFunctionName, parameters: params) { (response, error) -> Void in

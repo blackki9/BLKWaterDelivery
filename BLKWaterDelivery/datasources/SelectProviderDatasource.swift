@@ -18,6 +18,6 @@ class SelectProviderDatasource: NSObject, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        return tableView.dequeueReusableCellWithIdentifier(SelectProviderCellIdentifier) as! UITableViewCell
+        return tableView.dequeueReusableCellWithIdentifier(SelectProviderCellIdentifier)! as UITableViewCell
     }
 }

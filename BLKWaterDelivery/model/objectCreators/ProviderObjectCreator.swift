@@ -10,9 +10,9 @@ import UIKit
 
 class ProviderObjectCreator: NSObject, ObjectCreator {
 
-    func createObjectWithData(objectData:Dictionary<String,AnyObject?>) -> AnyObject?
+    func createObjectsWithData(objectData:Dictionary<String,AnyObject>) -> NSArray?
     {
-        return nil;
+        return nil
     }
 
 }
