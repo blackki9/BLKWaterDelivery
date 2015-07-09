@@ -1,4 +1,6 @@
 xcuserdata
-project.xcworkspace
+BLKWaterDelivery.xcworkspace
 DerivedData
 Pods/
+Podfile.lock
+.DS_Store
