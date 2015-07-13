@@ -12,5 +12,5 @@ protocol Builder
 {
     var requestParameters: Dictionary <String,String>? {get set}
     func injectDependencies()
-    func buildWithCompletition(handler:(result:Builder, objects:NSArray) -> Void)
+    func buildWithCompletition(handler:(result:Builder, objects:Array<AnyObject>) -> Void)
 }

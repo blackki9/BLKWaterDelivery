@@ -10,15 +10,20 @@ import UIKit
 
 class BaseBuilder: NSObject, Builder {
    
-    var completitionHandler:((result:Builder, objects:NSArray)->Void)?
+    var completitionHandler:((result:Builder, objects:Array<AnyObject>)->Void)?
     var objectCreator:ObjectCreator?
-    var parser:ObjectInfoParser?
+    var parser = JSONParser()
     var remoteCommunicator:RemoteCommunicator?
     var dbManager:DBManager?
     var requestParameters:Dictionary<String,String>?
     var resultObjects:NSArray?
     
-    func buildWithCompletition(handler:(result:Builder, objects:NSArray) -> Void)
+    override init ()
+    {
+        super.init()
+        injectDependencies()
+    }
+    func buildWithCompletition(handler:(result:Builder, objects:Array<AnyObject>) -> Void)
     {
         loadParseableDataFromRemote()
         completitionHandler = handler;
@@ -38,14 +43,12 @@ class BaseBuilder: NSObject, Builder {
         }
     }
     func parseCommunicatorResult(result:String?) {
-        if let unwrappedParser = parser {
-          let resultDictionary = unwrappedParser.parse(result) as? Dictionary<String,AnyObject>
+          let resultDictionary = parser.parse(result)
             if let objectsInfo = resultDictionary {
                 createObjectsWithInfo(objectsInfo);
             }
-        }
     }
-    func createObjectsWithInfo(objectInfo:Dictionary<String,AnyObject>)
+    func createObjectsWithInfo(objectInfo:Dictionary<String,JSON>)
     {
         if let creator = self.objectCreator {
             self.resultObjects = creator.createObjectsWithData(objectInfo)
@@ -62,14 +65,14 @@ class BaseBuilder: NSObject, Builder {
         }
         completitionHandler = nil
     }
-    func emptyArrayIfHereIsNoCreatedObjects() -> NSArray?
+    func emptyArrayIfHereIsNoCreatedObjects() -> Array<AnyObject>?
     {
-        var objects : NSArray?
+        var objects : Array<AnyObject>?
         if let result = self.resultObjects {
-            objects = result;
+            objects = result as Array<AnyObject>;
         }
         else {
-            objects = NSArray()
+            objects = [AnyObject]()
         }
         return objects
     }

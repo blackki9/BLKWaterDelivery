@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol LocalDataProvider
+{
+    func allItems() -> Array<AnyObject>
+}

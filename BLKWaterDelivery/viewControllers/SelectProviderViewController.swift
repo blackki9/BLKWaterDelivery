@@ -13,6 +13,8 @@ let showProviderInfoSegueIdentifier = "ShowProviderInfoSegue"
 class SelectProviderViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    var dataProvider:ProvidersDataProvider?
+    
     private let dataSource:SelectProviderDatasource = SelectProviderDatasource()
     
     override func viewDidLoad() {
@@ -22,7 +24,12 @@ class SelectProviderViewController: UIViewController {
     }
     func loadProviders()
     {
-        tableView.reloadData()
+        dataProvider?.loadProvidersWithHandler({(providers:Array<AnyObject>)->Void in
+            self.dataSource.allProviders = providers;
+            dispatch_sync(dispatch_get_main_queue(), {[weak self] () -> Void in
+                self?.tableView?.reloadData()
+            })
+        })
     }
 
     override func didReceiveMemoryWarning() {

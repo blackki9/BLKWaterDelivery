@@ -11,13 +11,26 @@ import UIKit
 let SelectProviderCellIdentifier = "SelectProviderCell"
 
 class SelectProviderDatasource: NSObject, UITableViewDataSource {
+    
+    var allProviders:Array<AnyObject>?
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1;
+        var count = 0
+        if let providersCount = self.allProviders?.count {
+            count = providersCount
+        }
+        return count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        return tableView.dequeueReusableCellWithIdentifier(SelectProviderCellIdentifier)! as UITableViewCell
+        let cell:SelectProviderTableViewCell = tableView.dequeueReusableCellWithIdentifier(SelectProviderCellIdentifier)! as! SelectProviderTableViewCell
+        if let object = allProviders?[indexPath.row] {
+            let deliveryProvider = object as! DeliveryProvider
+            cell.nameLabel.text = deliveryProvider.name;
+        }
+        
+        return cell;
     }
 }
