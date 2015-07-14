@@ -27,6 +27,8 @@ class DeliveryProvidersUpdater: NSObject,Updater {
             communicator.getUpdatesAfterDate(date, completition: {[weak self] (result) -> Void in
                 if let info = self?.parser?.parse(result) {
                     self?.updateItemsWithInfo(info as! Dictionary<String,AnyObject>)
+                    self?.completitionHandler?(updated:true)
+                    self?.completitionHandler = nil
                 }
                 else {
                     self?.notifyAboutError()
@@ -42,14 +44,13 @@ class DeliveryProvidersUpdater: NSObject,Updater {
         let objectsArray = info["data"]
         if let array = objectsArray as! NSArray? {
             for value in array {
-                print(value)
                 self.updateItemWithInfo(value as! Dictionary<String, AnyObject>)
             }
         }
     }
     func updateItemWithInfo(objectInfo:Dictionary<String, AnyObject>)
     {
-        let object = self.findObjectWithObjectId(objectInfo["objectId"] as! String)
+        let object = self.findObjectByObjectId(objectInfo["objectId"] as! String)
         if let unwrappedObject = object {
             objectCreator?.updateObject(unwrappedObject, withData: objectInfo)
         }
@@ -57,7 +58,7 @@ class DeliveryProvidersUpdater: NSObject,Updater {
             objectCreator?.createObjectWithData(objectInfo)
         }
     }
-    func findObjectWithObjectId(objectId:String) -> DeliveryProvider?
+    func findObjectByObjectId(objectId:String) -> DeliveryProvider?
     {
         let predicate = NSPredicate(format: "objectId == %@", objectId)
         return DeliveryProvider.MR_findFirstWithPredicate(predicate)
@@ -65,6 +66,7 @@ class DeliveryProvidersUpdater: NSObject,Updater {
     func notifyAboutError() {
         self.completitionHandler?(updated:false)
     }
+    
     func saveLastUpdateDate(date:NSDate) {
         NSUserDefaults.standardUserDefaults().setObject(date, forKey: "lastUpdateDate")
         NSUserDefaults.standardUserDefaults().synchronize()

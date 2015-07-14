@@ -10,7 +10,6 @@ import UIKit
 
 class ProvidersDataProvider: NSObject, DataProvider {
     var localDataProvider:LocalDataProvider? = LocalDeliveryProviderDataProvider()
-    var builder:Builder? = BuildersFactory.providersBuilder()
     var updater:Updater? = DeliveryProvidersUpdater()
     var reachabilityChecker:ReachabilityChecker? = ReachabilityChecker()
     var finishHandler:((providers:Array<AnyObject>)->Void)?
@@ -21,20 +20,9 @@ class ProvidersDataProvider: NSObject, DataProvider {
 
         if let connected = reachabilityChecker?.isConnectedToNetwork() {
             if connected {
-                self.isHasUpdates() { [weak self] (hasUpdates:Bool) -> Void in
-                    if hasUpdates {
-                        self?.updater?.updateItemsWithCompletitionHandler({(completed) -> Void in
-                            self?.loadAndHandleLocalProviders()
-                        })
-                    }
-                    else {
-                        self?.builder?.buildWithCompletition({[weak self] (result, objects) -> Void in
-                            self?.updater?.saveLastUpdateDate(NSDate())
-                            self?.finishHandler?(providers: objects as Array<AnyObject>)
-                            self?.finishHandler = nil
-                        })
-                    }
-                }
+                self.updater?.updateItemsWithCompletitionHandler({[weak self] (completed) -> Void in
+                    self?.loadAndHandleLocalProviders()
+                })
             }
             else {
                 self.loadAndHandleLocalProviders()

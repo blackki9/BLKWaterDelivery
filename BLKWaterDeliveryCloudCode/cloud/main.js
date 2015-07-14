@@ -47,5 +47,5 @@ Parse.Cloud.define("getUpdatesForProviders",function(request,response) {
     error:function(error) {
         response.error("error "+error + "request parameter " + updateDate)
     }
-               });
+    });
 });

@@ -11,7 +11,6 @@ import Foundation
 protocol DataProvider
 {
     var localDataProvider:LocalDataProvider? {get set}
-    var builder:Builder? {get set}
     var updater:Updater? {get set}
     var reachabilityChecker:ReachabilityChecker? {get set}
 }

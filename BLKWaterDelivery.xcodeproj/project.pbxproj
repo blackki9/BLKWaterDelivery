@@ -21,17 +21,12 @@
 		FD17136A1B457FBA005110AD /* SelectProviderDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1713691B457FBA005110AD /* SelectProviderDatasource.swift */; };
 		FD17136D1B45807F005110AD /* SelectProviderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17136C1B45807F005110AD /* SelectProviderTableViewCell.swift */; };
 		FD1E23DE1B4EE7750086F609 /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E23DD1B4EE7750086F609 /* LocalDataProvider.swift */; };
-		FD2729FD1B51A4DF00398126 /* BuildersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2729FC1B51A4DF00398126 /* BuildersFactory.swift */; };
 		FD2729FF1B51A58400398126 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2729FE1B51A58400398126 /* DataProvider.swift */; };
 		FD272A021B51A61C00398126 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD272A011B51A61C00398126 /* Updater.swift */; };
 		FD272A041B51A65B00398126 /* ReachabilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD272A031B51A65B00398126 /* ReachabilityChecker.swift */; };
 		FD775BD11B4EB9C400B7D0B1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD775BD01B4EB9C400B7D0B1 /* Accounts.framework */; };
 		FD775BD31B4EB9D700B7D0B1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD775BD21B4EB9D700B7D0B1 /* Social.framework */; };
 		FD775BD61B4EBA4400B7D0B1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD775BD51B4EBA4400B7D0B1 /* SwiftyJSON.swift */; };
-		FD775BD81B4EBA7100B7D0B1 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD775BD71B4EBA7100B7D0B1 /* Builder.swift */; };
-		FD775BDA1B4EBA8400B7D0B1 /* ProviderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD775BD91B4EBA8400B7D0B1 /* ProviderBuilder.swift */; };
-		FD775BDC1B4EBA9400B7D0B1 /* ContactInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD775BDB1B4EBA9400B7D0B1 /* ContactInfoBuilder.swift */; };
-		FD775BDE1B4EBB1200B7D0B1 /* BaseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD775BDD1B4EBB1200B7D0B1 /* BaseBuilder.swift */; };
 		FDB90C511B43EA310003B3D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB90C501B43EA310003B3D2 /* AppDelegate.swift */; };
 		FDB90C561B43EA310003B3D2 /* Providers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB90C541B43EA310003B3D2 /* Providers.storyboard */; };
 		FDB90C581B43EA310003B3D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB90C571B43EA310003B3D2 /* Images.xcassets */; };
@@ -99,17 +94,12 @@
 		FD1713691B457FBA005110AD /* SelectProviderDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProviderDatasource.swift; sourceTree = "<group>"; };
 		FD17136C1B45807F005110AD /* SelectProviderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProviderTableViewCell.swift; sourceTree = "<group>"; };
 		FD1E23DD1B4EE7750086F609 /* LocalDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
-		FD2729FC1B51A4DF00398126 /* BuildersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildersFactory.swift; sourceTree = "<group>"; };
 		FD2729FE1B51A58400398126 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		FD272A011B51A61C00398126 /* Updater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		FD272A031B51A65B00398126 /* ReachabilityChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityChecker.swift; sourceTree = "<group>"; };
 		FD775BD01B4EB9C400B7D0B1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		FD775BD21B4EB9D700B7D0B1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FD775BD51B4EBA4400B7D0B1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		FD775BD71B4EBA7100B7D0B1 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
-		FD775BD91B4EBA8400B7D0B1 /* ProviderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderBuilder.swift; sourceTree = "<group>"; };
-		FD775BDB1B4EBA9400B7D0B1 /* ContactInfoBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoBuilder.swift; sourceTree = "<group>"; };
-		FD775BDD1B4EBB1200B7D0B1 /* BaseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBuilder.swift; sourceTree = "<group>"; };
 		FDB90C4B1B43EA310003B3D2 /* BLKWaterDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLKWaterDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB90C4F1B43EA310003B3D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDB90C501B43EA310003B3D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,18 +244,6 @@
 			path = updaters;
 			sourceTree = "<group>";
 		};
-		FD775BCF1B4EB36900B7D0B1 /* builders */ = {
-			isa = PBXGroup;
-			children = (
-				FD775BD71B4EBA7100B7D0B1 /* Builder.swift */,
-				FD775BD91B4EBA8400B7D0B1 /* ProviderBuilder.swift */,
-				FD775BDB1B4EBA9400B7D0B1 /* ContactInfoBuilder.swift */,
-				FD775BDD1B4EBB1200B7D0B1 /* BaseBuilder.swift */,
-				FD2729FC1B51A4DF00398126 /* BuildersFactory.swift */,
-			);
-			path = builders;
-			sourceTree = "<group>";
-		};
 		FD775BD41B4EBA4400B7D0B1 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,7 +378,6 @@
 				FD0CA7001B54347100538750 /* DeliveryProvider.swift */,
 				FD272A001B51A61300398126 /* updaters */,
 				FD1E23DC1B4EE75C0086F609 /* localDataProviders */,
-				FD775BCF1B4EB36900B7D0B1 /* builders */,
 				FDE394C11B4C4CD300531870 /* objectCreators */,
 				FDE394D51B4C53DE00531870 /* DBManager.swift */,
 				FD2729FE1B51A58400398126 /* DataProvider.swift */,
@@ -576,7 +553,6 @@
 				FD0CA7121B5513B300538750 /* DeliveryProvider+CoreDataProperties.swift in Sources */,
 				FD0CA7081B543D7C00538750 /* JSONParser.swift in Sources */,
 				FDE394C51B4C4CD300531870 /* ContactInfoObjectCreator.swift in Sources */,
-				FD775BD81B4EBA7100B7D0B1 /* Builder.swift in Sources */,
 				FD1E23DE1B4EE7750086F609 /* LocalDataProvider.swift in Sources */,
 				FDB90C831B4407780003B3D2 /* ProfileViewController.swift in Sources */,
 				FD775BD61B4EBA4400B7D0B1 /* SwiftyJSON.swift in Sources */,
@@ -593,18 +569,14 @@
 				FD0CA7021B54347100538750 /* DeliveryProvider.swift in Sources */,
 				FD17136D1B45807F005110AD /* SelectProviderTableViewCell.swift in Sources */,
 				FDD39DAB1B49699B00D81FFB /* ParseRequestsWrapper.swift in Sources */,
-				FD775BDE1B4EBB1200B7D0B1 /* BaseBuilder.swift in Sources */,
 				FD272A021B51A61C00398126 /* Updater.swift in Sources */,
 				FD0CA7131B5513B300538750 /* ContactInfo+CoreDataProperties.swift in Sources */,
 				FD0CA70A1B54D05100538750 /* DeliveryProvidersUpdater.swift in Sources */,
 				FD0CA6FE1B5433FF00538750 /* BLKWaterDelivery.xcdatamodeld in Sources */,
-				FD775BDC1B4EBA9400B7D0B1 /* ContactInfoBuilder.swift in Sources */,
 				FDE394D21B4C4EBB00531870 /* ContactInfoRemoteCommunicator.swift in Sources */,
 				FDE394D41B4C4EF100531870 /* RemoteCommunicatorFactory.swift in Sources */,
-				FD2729FD1B51A4DF00398126 /* BuildersFactory.swift in Sources */,
 				FDE394C91B4C4CEB00531870 /* ObjectCreatorFactory.swift in Sources */,
 				FDE394C71B4C4CD300531870 /* ProviderObjectCreator.swift in Sources */,
-				FD775BDA1B4EBA8400B7D0B1 /* ProviderBuilder.swift in Sources */,
 				FDB90C741B43FDF60003B3D2 /* ProviderInfoViewController.swift in Sources */,
 				FDE394D61B4C53DE00531870 /* DBManager.swift in Sources */,
 				FD17136A1B457FBA005110AD /* SelectProviderDatasource.swift in Sources */,
