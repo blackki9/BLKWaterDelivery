@@ -10,12 +10,12 @@ import UIKit
 
 class ObjectCreatorFactory: NSObject {
    
-    func providerObjectCreator() -> ObjectCreator
+    static func providerObjectCreator() -> ObjectCreator
     {
         return ProviderObjectCreator()
     }
     
-    func contactInfoObjectCreator() -> ObjectCreator
+    static func contactInfoObjectCreator() -> ObjectCreator
     {
         return ContactInfoObjectCreator()
     }

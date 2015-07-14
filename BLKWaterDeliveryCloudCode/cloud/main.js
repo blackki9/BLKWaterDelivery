@@ -36,3 +36,16 @@ Parse.Cloud.define("loadContactInfoForProvider",function(request,response) {
             response.error("error" + error);
         }});
 });
+
+Parse.Cloud.define("getUpdatesForProviders",function(request,response) {
+    var updateDate = request.params.updateDate;
+    var query = new Parse.Query(DeliveryProvider);
+    query.greaterThan("updatedAt",updateDate);
+    query.find({success:function(results) {
+        response.success(JSON.stringify(results));
+    },
+    error:function(error) {
+        response.error("error "+error + "request parameter " + updateDate)
+    }
+               });
+});

@@ -10,14 +10,14 @@ import UIKit
 
 class BaseBuilder: NSObject, Builder {
    
-    var completitionHandler:((result:Builder, objects:Array<AnyObject>)->Void)?
     var objectCreator:ObjectCreator?
     var parser = JSONParser()
     var remoteCommunicator:RemoteCommunicator?
     var dbManager:DBManager?
     var requestParameters:Dictionary<String,String>?
-    var resultObjects:NSArray?
-    
+    var resultObjects:Array<AnyObject>?
+    var completitionHandler:((result:Builder, objects:Array<AnyObject>)->Void)?
+
     override init ()
     {
         super.init()
@@ -48,14 +48,14 @@ class BaseBuilder: NSObject, Builder {
                 createObjectsWithInfo(objectsInfo);
             }
     }
-    func createObjectsWithInfo(objectInfo:Dictionary<String,JSON>)
+    func createObjectsWithInfo(objectInfo:Dictionary<String,AnyObject?>)
     {
         if let creator = self.objectCreator {
-            self.resultObjects = creator.createObjectsWithData(objectInfo)
-            if let dbManager = self.dbManager {
-                dbManager.save()
-            }
-            callCompletitionHandler()
+            creator.createObjectsWithData(objectInfo,completition:{[weak self] (result:Array<AnyObject>)->Void in
+                self?.resultObjects = result
+                self?.callCompletitionHandler()
+            })
+
         }
     }
     func callCompletitionHandler()

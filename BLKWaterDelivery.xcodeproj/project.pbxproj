@@ -11,9 +11,13 @@
 		FD0CA6FB1B542E0300538750 /* ProvidersDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA6FA1B542E0300538750 /* ProvidersDataProvider.swift */; };
 		FD0CA6FE1B5433FF00538750 /* BLKWaterDelivery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA6FC1B5433FF00538750 /* BLKWaterDelivery.xcdatamodeld */; };
 		FD0CA7021B54347100538750 /* DeliveryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA7001B54347100538750 /* DeliveryProvider.swift */; };
-		FD0CA7041B5434BD00538750 /* DeliveryProvider+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA7031B5434BD00538750 /* DeliveryProvider+CoreDataProperties.swift */; };
 		FD0CA7061B543C7300538750 /* LocalDeliveryProviderDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA7051B543C7300538750 /* LocalDeliveryProviderDataProvider.swift */; };
 		FD0CA7081B543D7C00538750 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA7071B543D7C00538750 /* JSONParser.swift */; };
+		FD0CA70A1B54D05100538750 /* DeliveryProvidersUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA7091B54D05100538750 /* DeliveryProvidersUpdater.swift */; };
+		FD0CA70D1B5510C700538750 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CA70C1B5510C700538750 /* CoreData.framework */; };
+		FD0CA7121B5513B300538750 /* DeliveryProvider+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA70F1B5513B300538750 /* DeliveryProvider+CoreDataProperties.swift */; };
+		FD0CA7131B5513B300538750 /* ContactInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA7101B5513B300538750 /* ContactInfo+CoreDataProperties.swift */; };
+		FD0CA7141B5513B300538750 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CA7111B5513B300538750 /* ContactInfo.swift */; };
 		FD17136A1B457FBA005110AD /* SelectProviderDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1713691B457FBA005110AD /* SelectProviderDatasource.swift */; };
 		FD17136D1B45807F005110AD /* SelectProviderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17136C1B45807F005110AD /* SelectProviderTableViewCell.swift */; };
 		FD1E23DE1B4EE7750086F609 /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E23DD1B4EE7750086F609 /* LocalDataProvider.swift */; };
@@ -84,9 +88,14 @@
 		FD0CA6FA1B542E0300538750 /* ProvidersDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvidersDataProvider.swift; sourceTree = "<group>"; };
 		FD0CA6FD1B5433FF00538750 /* BLKWaterDelivery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BLKWaterDelivery.xcdatamodel; sourceTree = "<group>"; };
 		FD0CA7001B54347100538750 /* DeliveryProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryProvider.swift; sourceTree = "<group>"; };
-		FD0CA7031B5434BD00538750 /* DeliveryProvider+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeliveryProvider+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FD0CA7051B543C7300538750 /* LocalDeliveryProviderDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDeliveryProviderDataProvider.swift; sourceTree = "<group>"; };
 		FD0CA7071B543D7C00538750 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		FD0CA7091B54D05100538750 /* DeliveryProvidersUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryProvidersUpdater.swift; sourceTree = "<group>"; };
+		FD0CA70C1B5510C700538750 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FD0CA70E1B55111F00538750 /* BLKWaterDelivery-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BLKWaterDelivery-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		FD0CA70F1B5513B300538750 /* DeliveryProvider+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeliveryProvider+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FD0CA7101B5513B300538750 /* ContactInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContactInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FD0CA7111B5513B300538750 /* ContactInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		FD1713691B457FBA005110AD /* SelectProviderDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProviderDatasource.swift; sourceTree = "<group>"; };
 		FD17136C1B45807F005110AD /* SelectProviderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProviderTableViewCell.swift; sourceTree = "<group>"; };
 		FD1E23DD1B4EE7750086F609 /* LocalDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
@@ -149,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0CA70D1B5510C700538750 /* CoreData.framework in Frameworks */,
 				FD775BD31B4EB9D700B7D0B1 /* Social.framework in Frameworks */,
 				FD775BD11B4EB9C400B7D0B1 /* Accounts.framework in Frameworks */,
 				FDD39DA31B47F93200D81FFB /* Security.framework in Frameworks */,
@@ -191,6 +201,7 @@
 		AA3E8BBCF059BADB219E3F27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD0CA70C1B5510C700538750 /* CoreData.framework */,
 				FD775BD21B4EB9D700B7D0B1 /* Social.framework */,
 				FD775BD01B4EB9C400B7D0B1 /* Accounts.framework */,
 				6AC7D2F5E7A06F4DE60B604E /* libPods.a */,
@@ -238,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				FD272A011B51A61C00398126 /* Updater.swift */,
+				FD0CA7091B54D05100538750 /* DeliveryProvidersUpdater.swift */,
 			);
 			path = updaters;
 			sourceTree = "<group>";
@@ -293,6 +305,7 @@
 		FDB90C4D1B43EA310003B3D2 /* BLKWaterDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				FD0CA70E1B55111F00538750 /* BLKWaterDelivery-Bridging-Header.h */,
 				FD775BD41B4EBA4400B7D0B1 /* thirdParty */,
 				FDE394BA1B4C4BBB00531870 /* model */,
 				FDD39D8D1B47F86700D81FFB /* frameworks */,
@@ -381,7 +394,9 @@
 		FDE394BA1B4C4BBB00531870 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				FD0CA7031B5434BD00538750 /* DeliveryProvider+CoreDataProperties.swift */,
+				FD0CA70F1B5513B300538750 /* DeliveryProvider+CoreDataProperties.swift */,
+				FD0CA7101B5513B300538750 /* ContactInfo+CoreDataProperties.swift */,
+				FD0CA7111B5513B300538750 /* ContactInfo.swift */,
 				FD0CA7001B54347100538750 /* DeliveryProvider.swift */,
 				FD272A001B51A61300398126 /* updaters */,
 				FD1E23DC1B4EE75C0086F609 /* localDataProviders */,
@@ -555,8 +570,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0CA7141B5513B300538750 /* ContactInfo.swift in Sources */,
 				FD0CA6FB1B542E0300538750 /* ProvidersDataProvider.swift in Sources */,
 				FDE394C61B4C4CD300531870 /* ObjectCreator.swift in Sources */,
+				FD0CA7121B5513B300538750 /* DeliveryProvider+CoreDataProperties.swift in Sources */,
 				FD0CA7081B543D7C00538750 /* JSONParser.swift in Sources */,
 				FDE394C51B4C4CD300531870 /* ContactInfoObjectCreator.swift in Sources */,
 				FD775BD81B4EBA7100B7D0B1 /* Builder.swift in Sources */,
@@ -570,7 +587,6 @@
 				FD2729FF1B51A58400398126 /* DataProvider.swift in Sources */,
 				FDB90C851B4407820003B3D2 /* OrdersViewController.swift in Sources */,
 				FD272A041B51A65B00398126 /* ReachabilityChecker.swift in Sources */,
-				FD0CA7041B5434BD00538750 /* DeliveryProvider+CoreDataProperties.swift in Sources */,
 				FDB90C7C1B4401770003B3D2 /* MakeOrderViewController.swift in Sources */,
 				FDE394CE1B4C4D8800531870 /* RemoteCommunicator.swift in Sources */,
 				FDB90C721B43F8220003B3D2 /* SelectProviderViewController.swift in Sources */,
@@ -579,6 +595,8 @@
 				FDD39DAB1B49699B00D81FFB /* ParseRequestsWrapper.swift in Sources */,
 				FD775BDE1B4EBB1200B7D0B1 /* BaseBuilder.swift in Sources */,
 				FD272A021B51A61C00398126 /* Updater.swift in Sources */,
+				FD0CA7131B5513B300538750 /* ContactInfo+CoreDataProperties.swift in Sources */,
+				FD0CA70A1B54D05100538750 /* DeliveryProvidersUpdater.swift in Sources */,
 				FD0CA6FE1B5433FF00538750 /* BLKWaterDelivery.xcdatamodeld in Sources */,
 				FD775BDC1B4EBA9400B7D0B1 /* ContactInfoBuilder.swift in Sources */,
 				FDE394D21B4C4EBB00531870 /* ContactInfoRemoteCommunicator.swift in Sources */,
@@ -740,6 +758,7 @@
 				INFOPLIST_FILE = BLKWaterDelivery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BLKWaterDelivery-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -755,6 +774,7 @@
 				INFOPLIST_FILE = BLKWaterDelivery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BLKWaterDelivery-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -13,20 +13,24 @@ let showProviderInfoSegueIdentifier = "ShowProviderInfoSegue"
 class SelectProviderViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-    var dataProvider:ProvidersDataProvider?
+    var dataProvider:ProvidersDataProvider? = ProvidersDataProvider()
     
     private let dataSource:SelectProviderDatasource = SelectProviderDatasource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = dataSource;
-        loadProviders()
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0), {[weak self] in
+            self?.loadProviders()
+        })
+        
+    
     }
     func loadProviders()
     {
         dataProvider?.loadProvidersWithHandler({(providers:Array<AnyObject>)->Void in
             self.dataSource.allProviders = providers;
-            dispatch_sync(dispatch_get_main_queue(), {[weak self] () -> Void in
+            dispatch_async(dispatch_get_main_queue(), {[weak self] () -> Void in
                 self?.tableView?.reloadData()
             })
         })

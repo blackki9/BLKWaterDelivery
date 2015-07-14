@@ -10,5 +10,8 @@ import Foundation
 
 protocol ObjectCreator
 {
-    func createObjectsWithData(objectData:Dictionary<String,JSON>) -> NSArray?
+    func createObjectsWithData(objectData:Dictionary<String,AnyObject?>,completition:(Array<AnyObject>)->Void) -> Void
+    func createObjectWithData(objectData:Dictionary<String,AnyObject?>)
+    func updateObject(object:AnyObject, withData:Dictionary<String,AnyObject?>)
+    
 }

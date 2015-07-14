@@ -11,5 +11,5 @@ import CoreData
 
 @objc(DeliveryProvider)
 class DeliveryProvider: NSManagedObject {
-
+    var contactInfoObjectId:String?
 }

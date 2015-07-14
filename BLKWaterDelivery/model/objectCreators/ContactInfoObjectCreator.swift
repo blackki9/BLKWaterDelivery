@@ -10,8 +10,18 @@ import UIKit
 
 class ContactInfoObjectCreator: NSObject, ObjectCreator {
 
-    func createObjectsWithData(objectData:Dictionary<String,JSON>) -> NSArray?
-    {
-        return nil
+ func createObjectsWithData(objectData:Dictionary<String,AnyObject?>,completition:(Array<AnyObject>)->Void) -> Void    {
+    
     }
+    
+    func createObjectWithData(objectData:Dictionary<String,AnyObject?>)
+    {
+        
+    }
+    
+    func updateObject(object:AnyObject, withData:Dictionary<String,AnyObject?>)
+    {
+        
+    }
+    
 }

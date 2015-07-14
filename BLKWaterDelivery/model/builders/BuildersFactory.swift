@@ -10,13 +10,25 @@ import UIKit
 
 class BuildersFactory: NSObject {
 
-    func providersBuilder() -> Builder
+    static func providersBuilder() -> Builder
     {
-        return ProviderBuilder()
+        let result = ProviderBuilder()
+        
+        result.remoteCommunicator = RemoteCommunicatorFactory.providersCommunicator()
+        result.objectCreator = ObjectCreatorFactory.providerObjectCreator()
+        result.dbManager = DBManager.sharedInstance
+        
+        return result
     }
     
-    func contactInfoBuilder(objectId:String) -> Builder
+    static func contactInfoBuilder(objectId:String) -> Builder
     {
-        return ContactInfoBuilder(objectId: objectId)
+        let result = ContactInfoBuilder(objectId: objectId)
+        
+        result.remoteCommunicator = RemoteCommunicatorFactory.contactInfoCommunicator()
+        result.objectCreator = ObjectCreatorFactory.contactInfoObjectCreator()
+        result.dbManager = DBManager.sharedInstance
+        
+        return result
     }
 }

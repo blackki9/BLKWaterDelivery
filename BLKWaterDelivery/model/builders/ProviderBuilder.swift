@@ -11,8 +11,6 @@ import UIKit
 class ProviderBuilder: BaseBuilder {
     override func injectDependencies()
     {
-        self.objectCreator = ProviderObjectCreator()
-        self.remoteCommunicator = ProvidersRemoteCommunicator()
         self.requestParameters = [:]
     }
 }

@@ -11,4 +11,6 @@ import Foundation
 protocol RemoteCommunicator
 {
     func loadDataWithParameters(params:Dictionary<String,String>,callback:(result:String?)->Void)
+    func getUpdatesAfterDate(updateDate:NSDate,completition:(result:String?)->Void)
+    
 }

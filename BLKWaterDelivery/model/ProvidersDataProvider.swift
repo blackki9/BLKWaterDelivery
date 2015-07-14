@@ -9,10 +9,10 @@
 import UIKit
 
 class ProvidersDataProvider: NSObject, DataProvider {
-    var localDataProvider:LocalDataProvider?
-    var builder:Builder?
-    var updater:Updater?
-    var reachabilityChecker:ReachabilityChecker?
+    var localDataProvider:LocalDataProvider? = LocalDeliveryProviderDataProvider()
+    var builder:Builder? = BuildersFactory.providersBuilder()
+    var updater:Updater? = DeliveryProvidersUpdater()
+    var reachabilityChecker:ReachabilityChecker? = ReachabilityChecker()
     var finishHandler:((providers:Array<AnyObject>)->Void)?
     
     func loadProvidersWithHandler(handler:(providers:Array<AnyObject>)->Void)
@@ -28,8 +28,10 @@ class ProvidersDataProvider: NSObject, DataProvider {
                         })
                     }
                     else {
-                        self?.builder?.buildWithCompletition({ (result, objects) -> Void in
+                        self?.builder?.buildWithCompletition({[weak self] (result, objects) -> Void in
+                            self?.updater?.saveLastUpdateDate(NSDate())
                             self?.finishHandler?(providers: objects as Array<AnyObject>)
+                            self?.finishHandler = nil
                         })
                     }
                 }
@@ -38,15 +40,19 @@ class ProvidersDataProvider: NSObject, DataProvider {
                 self.loadAndHandleLocalProviders()
             }
         }
+        else {
+            self.loadAndHandleLocalProviders()
+        }
     }
     func isHasUpdates(handler:(Bool)->Void)
     {
-        
+        handler(true)
     }
     func loadAndHandleLocalProviders()
     {
         if let providers = localDataProvider?.allItems() {
             finishHandler?(providers: providers);
+            finishHandler = nil
         }
     }
 }

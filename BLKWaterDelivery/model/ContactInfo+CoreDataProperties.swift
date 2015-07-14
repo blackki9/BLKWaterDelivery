@@ -1,5 +1,5 @@
 //
-//  DeliveryProvider+CoreDataProperties.swift
+//  ContactInfo+CoreDataProperties.swift
 //  BLKWaterDelivery
 //
 //  Created by black9 on 14/07/15.
@@ -12,13 +12,12 @@
 import Foundation
 import CoreData
 
-extension DeliveryProvider {
+extension ContactInfo {
 
-    @NSManaged var name: String?
-    @NSManaged var objectId: String?
-    @NSManaged var logoURL: String?
-    @NSManaged var site: String?
-    @NSManaged var providerDescription: String?
+    @NSManaged var address: String?
     @NSManaged var lastUpdateAt: NSDate?
+    @NSManaged var contactPersonName: String?
+    @NSManaged var phoneNumber: String?
+    @NSManaged var additionalInfo: String?
 
 }

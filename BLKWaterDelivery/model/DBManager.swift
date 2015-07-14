@@ -9,10 +9,19 @@
 import UIKit
 
 class DBManager: NSObject {
-   
+    class var sharedInstance: DBManager {
+        struct Static {
+            static var onceToken: dispatch_once_t = 0
+            static var instance: DBManager? = nil
+        }
+        dispatch_once(&Static.onceToken) {
+            Static.instance = DBManager()
+        }
+        return Static.instance!
+    }
+    
     func save()
     {
-        
     }
     
 }

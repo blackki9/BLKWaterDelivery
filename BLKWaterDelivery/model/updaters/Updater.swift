@@ -10,5 +10,11 @@ import Foundation
 
 protocol Updater
 {
+    var remoteCommunicator:RemoteCommunicator? {get set}
+    var parser:JSONParser? {get set}
+    var completitionHandler:((updated:Bool)->Void)? {get set}
+    var objectCreator:ObjectCreator? {get set}
+    
+    func saveLastUpdateDate(date:NSDate)->Void
     func updateItemsWithCompletitionHandler(completitionHandler:(completed:Bool)->Void)
 }

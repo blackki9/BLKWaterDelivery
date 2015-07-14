@@ -28,7 +28,8 @@ class SelectProviderDatasource: NSObject, UITableViewDataSource {
         let cell:SelectProviderTableViewCell = tableView.dequeueReusableCellWithIdentifier(SelectProviderCellIdentifier)! as! SelectProviderTableViewCell
         if let object = allProviders?[indexPath.row] {
             let deliveryProvider = object as! DeliveryProvider
-            cell.nameLabel.text = deliveryProvider.name;
+            cell.nameLabel.text = deliveryProvider.name
+            cell.descriptionField.text = deliveryProvider.providerDescription
         }
         
         return cell;

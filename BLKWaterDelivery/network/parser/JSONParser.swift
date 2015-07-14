@@ -9,11 +9,14 @@
 import UIKit
 
 class JSONParser: NSObject {
-    func parse(input:String?)-> Dictionary<String,JSON>?
+    func parse(input:String?)-> Dictionary<String,AnyObject?>?
     {
         if let inputString = input {
-          let parsedObject = JSON(inputString)
-            return ["data":parsedObject]
+            let data = inputString.dataUsingEncoding(NSUTF8StringEncoding   )
+            do {
+                let parsedObject: AnyObject? = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+                return ["data":parsedObject]
+            }
         }
         
         return nil

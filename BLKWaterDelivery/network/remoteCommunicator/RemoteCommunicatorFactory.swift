@@ -9,12 +9,12 @@
 import UIKit
 
 class RemoteCommunicatorFactory: NSObject {
-    func providersCommunicator() -> RemoteCommunicator
+    static func providersCommunicator() -> RemoteCommunicator
     {
         return ProvidersRemoteCommunicator()
     }
     
-    func contactInfoCommunicator() -> RemoteCommunicator
+    static func contactInfoCommunicator() -> RemoteCommunicator
     {
         return ContactInfoRemoteCommunicator()
     }

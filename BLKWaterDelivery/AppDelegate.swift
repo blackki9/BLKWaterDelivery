@@ -14,39 +14,11 @@ import Bolts
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         initParseWithLaunchOptions(launchOptions)
-       
-//        ParseRequestsWrapper.callFunctionWithName("loadContactInfoForProvider", parameters: ["contactInfoObjectId":"zFlRNScYAI"], callback:{
-//            (response: AnyObject?, error: NSError?) -> Void in
-//            let responseOptional = response as? String
-//            if let responseString = responseOptional {
-//                println(responseString)
-//            }
-//            else {
-//                
-//            }
-//        })
-//        ParseRequestsWrapper.callFunctionWithName("loadProvidersForDefaultCity", parameters: [:], callback: {
-//            (response: AnyObject?, error: NSError?) -> Void in
-//            let responseOptional = response as? String
-//            if let responseString = responseOptional {
-//                println(responseString)
-//            }
-//            
-//        })
-        let factory = RemoteCommunicatorFactory()
+        MagicalRecord.setupCoreDataStackWithStoreNamed("BLKWaterDelivery")
         
-        factory.providersCommunicator().loadDataWithParameters([:], callback: { (result) -> Void in
-           print(result!)
-        })
-        
-        factory.contactInfoCommunicator().loadDataWithParameters(["contactInfoObjectId":"zFlRNScYAI"], callback: { (result) -> Void in
-            print(result!)
-        })
-               // Override point for customization after application launch.
         return true
     }
     func initParseWithLaunchOptions(launchOptions: [NSObject: AnyObject]?)

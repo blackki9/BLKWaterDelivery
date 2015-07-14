@@ -11,6 +11,6 @@ import UIKit
 class LocalDeliveryProviderDataProvider: NSObject,LocalDataProvider {
     func allItems() -> Array<AnyObject>
     {
-        return [AnyObject]()
+        return DeliveryProvider.MR_findAll()
     }
 }

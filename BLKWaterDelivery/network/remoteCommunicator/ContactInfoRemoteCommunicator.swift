@@ -19,4 +19,8 @@ class ContactInfoRemoteCommunicator: NSObject, RemoteCommunicator {
             callback(result: resultString)
         }
     }
+    func getUpdatesAfterDate(updateDate:NSDate,completition:(result:String?)->Void)
+    {
+        
+    }
 }
