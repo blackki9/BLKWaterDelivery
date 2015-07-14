@@ -32,10 +32,6 @@ class ProvidersDataProvider: NSObject, DataProvider {
             self.loadAndHandleLocalProviders()
         }
     }
-    func isHasUpdates(handler:(Bool)->Void)
-    {
-        handler(true)
-    }
     func loadAndHandleLocalProviders()
     {
         if let providers = localDataProvider?.allItems() {

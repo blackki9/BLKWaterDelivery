@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initParseWithLaunchOptions(launchOptions)
         MagicalRecord.setupCoreDataStackWithStoreNamed("BLKWaterDelivery")
         
+        ParseRequestsWrapper.callFunctionWithName("loadContactInfoForProviders", parameters: ["objectIdsArray":["zFlRNScYAI"]], callback: { (response, error) -> Void in
+                print(response as! String)
+            });
+        
         return true
     }
     func initParseWithLaunchOptions(launchOptions: [NSObject: AnyObject]?)
