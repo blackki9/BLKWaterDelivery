@@ -13,4 +13,7 @@ protocol DataProvider
     var localDataProvider:LocalDataProvider? {get set}
     var updater:Updater? {get set}
     var reachabilityChecker:ReachabilityChecker? {get set}
+    init(factory:ObjectLoadingFactory)
+    
+    func loadObjectsWithHandler(handler:(objects:Array<AnyObject>)->Void)
 }

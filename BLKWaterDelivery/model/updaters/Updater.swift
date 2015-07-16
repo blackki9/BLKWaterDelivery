@@ -18,3 +18,18 @@ protocol Updater
     func saveLastUpdateDate(date:NSDate)->Void
     func updateItemsWithCompletitionHandler(completitionHandler:(completed:Bool)->Void)
 }
+
+extension Updater
+{
+    var lastUpdateDate:NSDate? {
+        return NSUserDefaults.standardUserDefaults().objectForKey("lastUpdateDate") as? NSDate
+    }
+    
+    func saveLastUpdateDate(date:NSDate) {
+        NSUserDefaults.standardUserDefaults().setObject(date, forKey: "lastUpdateDate")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    
+    
+}

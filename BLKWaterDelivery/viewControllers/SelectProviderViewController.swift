@@ -13,8 +13,7 @@ let showProviderInfoSegueIdentifier = "ShowProviderInfoSegue"
 class SelectProviderViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-    var dataProvider:ProvidersDataProvider? = ProvidersDataProvider()
-    
+    var dataProvider:DataProvider? = EntityDataProvider(factory: DeliveryProviderDataFactory())
     private let dataSource:SelectProviderDatasource = SelectProviderDatasource()
     
     override func viewDidLoad() {
@@ -23,24 +22,16 @@ class SelectProviderViewController: UIViewController {
         dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0), {[weak self] in
             self?.loadProviders()
         })
-        
-    
     }
     func loadProviders()
     {
-        dataProvider?.loadProvidersWithHandler({(providers:Array<AnyObject>)->Void in
-            self.dataSource.allProviders = providers;
+        dataProvider?.loadObjectsWithHandler({[weak self](providers:Array<AnyObject>)->Void in
+            self?.dataSource.allProviders = providers;
             dispatch_async(dispatch_get_main_queue(), {[weak self] () -> Void in
                 self?.tableView?.reloadData()
             })
         })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 
 extension SelectProviderViewController : UITableViewDelegate

@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ProvidersDataProvider: NSObject, DataProvider {
-    var localDataProvider:LocalDataProvider? = LocalDeliveryProviderDataProvider()
-    var updater:Updater? = DeliveryProvidersUpdater()
+class EntityDataProvider: NSObject, DataProvider {
+    var localDataProvider:LocalDataProvider?
+    var updater:Updater?
     var reachabilityChecker:ReachabilityChecker? = ReachabilityChecker()
     var finishHandler:((providers:Array<AnyObject>)->Void)?
+    
+    required init(factory:ObjectLoadingFactory)
+    {
+        localDataProvider = factory.localDataProvider()
+        updater = factory.updater()
+    }
     
     func loadProvidersWithHandler(handler:(providers:Array<AnyObject>)->Void)
     {
