@@ -15,13 +15,15 @@ class SelectProviderViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var dataProvider:DataProvider? = EntityDataProvider(factory: DeliveryProviderDataFactory())
     private let dataSource:SelectProviderDatasource = SelectProviderDatasource()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = dataSource;
         dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0), {[weak self] in
             self?.loadProviders()
         })
+        BLKLoginManager.sharedInstance.showSignUpScrenOnViewController(self) { (succeded, error) -> () in
+            
+        }
     }
     func loadProviders()
     {

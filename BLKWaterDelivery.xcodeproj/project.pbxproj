@@ -21,6 +21,7 @@
 		FD10C3851B57CF1400584432 /* EntityDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10C3801B57CF1400584432 /* EntityDataProvider.swift */; };
 		FD10C3861B57CF1400584432 /* DeliveryProviderDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10C3821B57CF1400584432 /* DeliveryProviderDataFactory.swift */; };
 		FD10C3871B57CF1400584432 /* ObjectLoadingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10C3831B57CF1400584432 /* ObjectLoadingFactory.swift */; };
+		FD10C38A1B57F66100584432 /* BLKLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD10C3891B57F66100584432 /* BLKLoginManager.swift */; };
 		FD17136A1B457FBA005110AD /* SelectProviderDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1713691B457FBA005110AD /* SelectProviderDatasource.swift */; };
 		FD17136D1B45807F005110AD /* SelectProviderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17136C1B45807F005110AD /* SelectProviderTableViewCell.swift */; };
 		FD1E23DE1B4EE7750086F609 /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E23DD1B4EE7750086F609 /* LocalDataProvider.swift */; };
@@ -98,6 +99,7 @@
 		FD10C3801B57CF1400584432 /* EntityDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityDataProvider.swift; sourceTree = "<group>"; };
 		FD10C3821B57CF1400584432 /* DeliveryProviderDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryProviderDataFactory.swift; sourceTree = "<group>"; };
 		FD10C3831B57CF1400584432 /* ObjectLoadingFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectLoadingFactory.swift; sourceTree = "<group>"; };
+		FD10C3891B57F66100584432 /* BLKLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLKLoginManager.swift; sourceTree = "<group>"; };
 		FD1713691B457FBA005110AD /* SelectProviderDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProviderDatasource.swift; sourceTree = "<group>"; };
 		FD17136C1B45807F005110AD /* SelectProviderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProviderTableViewCell.swift; sourceTree = "<group>"; };
 		FD1E23DD1B4EE7750086F609 /* LocalDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
@@ -236,6 +238,14 @@
 			path = objectLoadingFactories;
 			sourceTree = "<group>";
 		};
+		FD10C3881B57F62A00584432 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				FD10C3891B57F66100584432 /* BLKLoginManager.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
 		FD1713681B457F9F005110AD /* datasources */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +332,7 @@
 		FDB90C4D1B43EA310003B3D2 /* BLKWaterDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				FD10C3881B57F62A00584432 /* auth */,
 				FD0CA70E1B55111F00538750 /* BLKWaterDelivery-Bridging-Header.h */,
 				FD775BD41B4EBA4400B7D0B1 /* thirdParty */,
 				FDE394BA1B4C4BBB00531870 /* model */,
@@ -618,6 +629,7 @@
 				FDE394C71B4C4CD300531870 /* ProviderObjectCreator.swift in Sources */,
 				FD10C3841B57CF1400584432 /* DataProvider.swift in Sources */,
 				FDB90C741B43FDF60003B3D2 /* ProviderInfoViewController.swift in Sources */,
+				FD10C38A1B57F66100584432 /* BLKLoginManager.swift in Sources */,
 				FDE394D61B4C53DE00531870 /* DBManager.swift in Sources */,
 				FD17136A1B457FBA005110AD /* SelectProviderDatasource.swift in Sources */,
 			);
